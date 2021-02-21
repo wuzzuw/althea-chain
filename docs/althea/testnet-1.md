@@ -328,6 +328,19 @@ You can be jailed for several different reasons. As part of the Althea testnet w
 althea tx slashing unjail --from myvalidatorkeyname --chain-id=althea-testnet1v2
 ```
 
+You should get a 1 line response such as:
+```
+{"height":"0","txhash":"FAE2FA24926E1D1DC6D734DA75DBB9DA3998ECE2092E36FB2F78DD449A5268E5","codespace":"sdk","code":19,"data":"","raw_log":"","logs":[],"info":"","gas_wanted":"0","gas_used":"0","tx":null,"timestamp":""}
+```
+
+You might get:
+```
+Error: RPC error -32603 - Internal error: timed out waiting for tx to be included in a block
+```
+
+In which case, try again!
+
+
 ### Upgrading from althea-testnet1 to altheatestnet1v2
 
 Thank you very much for your patience and participation! During the initial launch of testnet1 we encountered several bugs that have now been patched. See our [blog post](https://blog.althea.net/althea-testnet-1-launched/) on the bugs you helped fix!
