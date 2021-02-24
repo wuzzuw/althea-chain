@@ -86,7 +86,7 @@ persistent_peers = "05ded2f258ab158c5526eb53aa14d122367115a7@testnet1.althea.net
 
 Ask what the current blockheight is in the chat
 
-```
+```console
 althea start
 ```
 
@@ -94,13 +94,13 @@ althea start
 
 Copy and paste your address into Zoom chat, or into the `#althea-validators` Discord channel, so that we can send you tokens.
 
-```
+```console
 althea keys list
 ```
 
 ### Send your validator setup transaction
 
-```
+```console
 althea tx staking create-validator \
   --amount=100000000ualtg \
   --pubkey=$(althea tendermint show-validator) \
@@ -121,7 +121,7 @@ althea tx staking create-validator \
 
 If you see one line in the response you are validating. If you don't see any output from this command you are not validating. Check that the last command ran successfully.
 
-```
+```console
 althea query tendermint-validator-set | grep "$(althea tendermint show-address)"
 ```
 
