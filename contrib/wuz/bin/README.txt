@@ -13,3 +13,7 @@ and set up  a crontab
 
 Note that currently this script can run not as root.  If we add the LED stuff then we need to run as root.
 
+
+to run unjailme.exp you'll need to run the following command:
+
+sudo apt-get install expect
