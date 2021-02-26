@@ -1,0 +1,18 @@
+#!/usr/bin/expect -f
+
+set validator [lindex $argv 0]
+set chain [lindex $argv 1]
+set password [lindex $argv 2]
+
+
+set timeout -1
+spawn althea-arm tx slashing unjail --from "${validator}" --fees 5000ualtg --chain-id "${chain}"
+match_max 100000
+expect -exact "Enter keyring passphrase:"
+send -- "${password}\r"
+expect -exact "confirm transaction before signing and broadcasting \[y/N\]: "
+send -- "y\r"
+expect eof
+
+
+
