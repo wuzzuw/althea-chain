@@ -11,3 +11,5 @@ and set up  a crontab
  */5 * * * *  /home/ubuntu/bin/amijailed.sh >> /var/log/althea_jailed.log
 
 
+Note that currently this script can run not as root.  If we add the LED stuff then we need to run as root.
+
